@@ -29,4 +29,6 @@ public class Publisher implements Serializable {
     @JsonProperty(access=JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "publisher",fetch = FetchType.LAZY)
     private Set<Book> books = new HashSet<>();
+
+    //OBS: como inserir um UUID através de comandos SQL: INSERT INTO publisher VALUES (gen_random_uuid(),'Novatec');
 }
